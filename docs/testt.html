@@ -6,9 +6,9 @@
 	<title>Hide and Show Content with Tabs</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="Displays.js"> </script>
-  <script src="initscript.js"> </script>
-  <script src="mac.js"> </script>
+  <script src="JS/Displays.js"> </script>
+  <script src="JS/initscript.js"> </script>
+  <script src="JS/mac.js"> </script>
 	<script>
 		$(document).ready(function(){
 			$(".content .tab_content").hide();
@@ -355,8 +355,8 @@ highlight {
 <script>
     var gpr=[0,0,0,0,0,0,0,0],ram=[],count=-1,z=0,flg=0,flg_s=0,cmp_flag=0,label=[],cnt=0;//count=-1,z=0;
     var addr_gd,gd_st,errorflag=0,disp,savan=0;
+    var labelcount=0;
     var extern=[];
-    //resetttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
     
     var data=[];
     
@@ -367,7 +367,7 @@ highlight {
     var arr= element.split("\n");
     for(var y=0;y<arr.length;y++){
     arr[y]=arr[y].replace(/\s/g, '');
-    data[y]=arr[y];
+   
     }  
     var imm,val1,val2,op1,op2,cmp_flag,flag,error=0,numb;
     for(z=0;z<arr.length;z++){
@@ -621,21 +621,17 @@ highlight {
         default: errorflag=1;                      
         }
     
-        if(errorflag==0){if(savan==1)
-        machine();
-      savan++;
-      }
+        
   
-    if(errorflag==0){
- 
- 
-    document.getElementById("tb3").value="SUCCESS";
-    
+    if(errorflag==0){ document.getElementById("tb3").value="success";
+    //  if(savan==1){
+       
+      // savan++;}
+      }
     // document.getElementById("tb3").value=dat;
-  }
     else {
     document.getElementById("tb3").value="ERROR";
-} document.getElementById("tb2").value=disp;
+}
 
     
     document.getElementById("r4").innerHTML=errorflag;
@@ -661,8 +657,25 @@ highlight {
    document.getElementById("c10").innerHTML=extern[4];
     }
 
-}
+} 
     }
+    for(var x=0;x<arr.length;x++){
+    if(arr[x].substring(0,1)=='B'){
+    
+    data[x]=arr[x].substring(0,3)+(label.indexOf(arr[x].substring(3,))-labelcount);
+    labelcount++;
+  }
+  else
+  data[x]=arr[x];
+}
+if(errorflag==0){
+  machine();
+  document.getElementById("tb2").value=disp;
+ 
+}
+else
+
+// document.getElementById("tb3").value=data;
     }
   
     
