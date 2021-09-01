@@ -156,12 +156,75 @@ body{
   color: white;
 }
 
+.main{
+    width:100%;
+}
+/* navigation links  */
+nav{
+    width:100%;
+    background-color: black; 
+    padding:0px 5px;
+    height:80px;
+    line-height:80px;
+    display:flex;
+    justify-content:space-between;
+   
+
+    
+}
+/* logo  */
+
+a{
+    text-decoration:none;
+    /* adding colours to link  */
+    color:white;
+    /* delaying with color  */
+    transition: 0.5s all ease;
+
+}
+ul{
+    margin:0px;
+    
 
 
+}
+ul li{
+    /*  arrange in order */
+    float: left;
+    /* y,x  */
+    padding: 1px 20px;
+
+
+}
+/* adding colours to links on clicking  */
+ul li a:hover{
+    color:red;
+
+}
+
+ 
 </style>
 
 <body>
-
+  <div class="main">
+    <div class="wrapper">
+        <!-- .header  -->
+        <div class="header">  
+            <nav>
+                <div class="logo">
+                    <!-- a.link  -->
+                   
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT</a></li>
+             
+                    <li><a href="contactus.html">CONTACT</a></li>
+                </ul>
+                
+            </nav>
+           
+       
     
     <div class="about">
      
@@ -170,11 +233,11 @@ body{
             <p class="text">
                <h2>Internship on </br> ADVANCED DIGITAL SYSTEM DESIGN USING FPGA</h2>
             </br>
-            <p class="tech"> Mission of this internship is to erect the intern with technical skills as well as to elevate the non-technical skills... and thus provide an industrial level of experience..!! 
+            <p class="tech"> The goal of this internship is to provide an industrial level of experience by equipping the intern with technical skills and elevating non-technical talents.
+            
 </br>
 </br>
-                Objective: Design and developing of microcontroller with microprocessor by introducing additional peripherals such as GPIO, UART, Interrupt and Timer. 
-                To develop a simulator for the hardware developed.</br>
+                Objective:   Design and development of a microcontroller containing a microprocessor that includes peripherals like GPIO, UART, Interrupt, and Timer. To create a simulator for the hardware that was created.</br>
                  </p></br></br></br></br></br></br>
             <button type="button" class="collapsible">Team Members</button>
 
@@ -215,7 +278,12 @@ body{
                 }
                 </script>
             
-            
+             
+        </div>
+      </div>
+  </div>
+  
+  </div>
         </div>
     </div>
 </body>
