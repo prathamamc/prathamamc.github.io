@@ -623,14 +623,14 @@ highlight {
     
         
   
-    if(errorflag==0){ document.getElementById("tb3").value="success";
+    if(errorflag==0){ document.getElementById("tb3").value="EXECUTED SUCCESSFULLY";
     //  if(savan==1){
        
       // savan++;}
       }
     // document.getElementById("tb3").value=dat;
     else {
-    document.getElementById("tb3").value="ERROR";
+    document.getElementById("tb3").value="ERROR!";
 }
 
     
@@ -673,10 +673,10 @@ if(errorflag==0){
   document.getElementById("tb2").value=disp;
  
 }
-else
+    }
 
 // document.getElementById("tb3").value=data;
-    }
+    
   
     
     
@@ -985,8 +985,8 @@ else
            // machine();
            // document.getElementById("tb3").innerHTML=data[count];
            document.getElementById("tb2").value=disp;
-          if (labelerror==1) document.getElementById("tb3").value="label "+arr[count].substring(3,)+" not found";
-          else if (errorflag==1) document.getElementById("tb3").value="syntax error at "+(count+1);
+          if (labelerror==1) document.getElementById("tb3").value="label "+arr[count].substring(3,)+" not found!";
+          else if (errorflag==1) document.getElementById("tb3").value="syntax error at line "+(count+1);
           else document.getElementById("tb3").value=arr[count];
        document.getElementById("row1").innerHTML=gpr[0];
       document.getElementById("row2").innerHTML=gpr[1]; 
