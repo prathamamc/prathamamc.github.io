@@ -34,8 +34,11 @@ body{
   width: 55%;
   background: #fff;
   border-radius: 6px;
-  padding: 20px 60px 30px 40px;
+  padding: 20px 80px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  float:right;
+  
+  
 }
 .container .content{
   display: flex;
@@ -80,7 +83,7 @@ body{
 .content .left-side .details .text-one,
 .content .left-side .details .text-two{
   font-size: 14px;
-  color: #afafb6;
+  color: #000000;
 }
 .container .content .right-side{
   width: 75%;
@@ -166,10 +169,74 @@ body{
    margin-left: 0;
  }
 }
+.main{
+    width:100%;
+}
+/* navigation links  */
+nav{
+    width:190%;
+    background-color: black; 
+    padding:0px 5px;
+    height:80px;
+    line-height:80px;
+    display:flex;
+    justify-content:space-between;
+   
+
+    
+}
+/* logo  */
+
+a{
+    text-decoration:none;
+    /* adding colours to link  */
+    color:white;
+    /* delaying with color  */
+    transition: 0.5s all ease;
+
+}
+ul{
+    margin:0px;
+    
 
 
+}
+ul li{
+    /*  arrange in order */
+    float: left;
+    /* y,x  */
+    padding: 1px 20px;
+
+
+}
+/* adding colours to links on clicking  */
+ul li a:hover{
+    color:red;
+
+}
+
+ 
    </style>
 <body>
+  <div class="main">
+    <div class="wrapper">
+        <!-- .header  -->
+        <div class="header">  
+            <nav>
+                <div class="logo">
+                    <!-- a.link  -->
+                   
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutus.html">ABOUT</a></li>
+             
+                    <li><a href="contactus.html">CONTACT</a></li>
+                </ul>
+                
+            </nav>
+
+
   <div class="container">
     <div class="content">
       <div class="left-side">
@@ -191,13 +258,31 @@ body{
               <div class="text-one">Mahesha Y</div>
               <div class="text-two">+918907075562</div>
             </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Cordinator:</div>
+              <div class="text-one">Priya Miranda</div>
+              <div class="text-two">+918073432948</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Cordinator:</div>
+              <div class="text-one">Jayalakshmi K P</div>
+              <div class="text-two">+917259772244</div>
+            </div>
             <div class="email details">
                 <i class="fas fa-envelope"></i>
                 <div class="topic">Email</div>
                 <div class="text-one">maheshy@gmail.com</div>
                 <div class="text-two">vijayg@sjec.ac.in</div>
+                <div class="text-two">priyam@sjec.ac.in</div>
+                <div class="text-two">jayalakshmi@sjec.ac.in</div>
               </div>
               
-      
+            </div>
+          </div>
+        </div>
+    </div>
+         
 </body>
 </html>
