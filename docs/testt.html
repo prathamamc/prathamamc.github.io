@@ -6,8 +6,8 @@
 	<title>Hide and Show Content with Tabs</title>
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="Displays.js"> </script>
-  <script src="initscript.js"> </script>
+  <script src="JS/Displays.js"> </script>
+  <script src="JS/initscript.js"> </script>
   <script src="JS/mac.js"> </script>
 	<script>
 		$(document).ready(function(){
@@ -422,12 +422,6 @@ highlight {
                   var numb = parseInt(numtxt);
                  }
 
-              else if((arr[z].substring(0,3)=='BSC'))
-              { 
-                if(flg==1)
-                          z=label.indexOf(arr[z].substring(3,));
-
-              }
               else
               errorflag==1;
               
@@ -527,9 +521,9 @@ highlight {
                 break;
 	   case 'STE':extern[numb]=op1.toString(16);
                 break;
-                case 'BRN':{z=label.indexOf(arr[z].substring(3,));}
+     case 'BRN':{z=label.indexOf(arr[z].substring(3,));}
                 break;
-            case 'BCS':{
+      case 'BCS':{
                           if(flg==1)
                           z=label.indexOf(arr[z].substring(3,));
                           errorflag=0;
@@ -668,11 +662,7 @@ highlight {
   else
   data[x]=arr[x];
 }
-if(errorflag==0){
-  machine();
-  document.getElementById("tb2").value=disp;
- 
-}
+
     }
 
 // document.getElementById("tb3").value=data;
@@ -743,6 +733,22 @@ if(errorflag==0){
        break label;
        }}
        
+       for(var y=0;y<arr.length;y++){
+    arr[y]=arr[y].replace(/\s/g, '');
+    if(arr[y].substring(0,1)=='B'){
+    
+    data[y]=arr[y].substring(0,3)+(label.indexOf(arr[y].substring(3,))-labelcount);
+    labelcount++;
+  }
+  else
+  data[y]=arr[y];
+}
+   
+     
+
+
+
+
        arr[count]=arr[count].replace(/\s/g, '');
        var imm,val1,val2,op1,op2,cmp_flag,flag,error=0,labelerror=0,numb,cnt=0;
        imm=0;
@@ -797,7 +803,7 @@ if(errorflag==0){
        }
        }
        
-       
+      
        switch(in1) {
            case 'A':op1=gpr[0];break;
            case 'B':op1=gpr[1];break;
@@ -984,10 +990,13 @@ if(errorflag==0){
            }
            // machine();
            // document.getElementById("tb3").innerHTML=data[count];
-           document.getElementById("tb2").value=disp;
+          
           if (labelerror==1) document.getElementById("tb3").value="label "+arr[count].substring(3,)+" not found!";
           else if (errorflag==1) document.getElementById("tb3").value="syntax error at line "+(count+1);
           else document.getElementById("tb3").value=arr[count];
+
+
+        
        document.getElementById("row1").innerHTML=gpr[0];
       document.getElementById("row2").innerHTML=gpr[1]; 
       document.getElementById("row3").innerHTML=gpr[2]; 
@@ -1014,6 +1023,12 @@ if(errorflag==0){
    
    
        }
+       if(errorflag==0){
+        savan++; 
+        if(savan==1){
+       machine();
+   document.getElementById("tb2").value=disp;}}
+ 
        }
 
 
@@ -1134,6 +1149,9 @@ var disp = "";
 //function to download tghe file which contains the machine codes
 function download(filename, text) {
 var disp = document.createElement('a');
+
+
+
 disp.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
 disp.setAttribute('download', filename);
 
