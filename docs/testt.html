@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
-	<meta charset="UTF-8">
-	<title>Hide and Show Content with Tabs</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="JS/Displays.js"> </script>
-  <script src="JS/initscript.js"> </script>
-  <script src="JS/mac.js"> </script>
-	<script>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
 		$(document).ready(function(){
 			$(".content .tab_content").hide();
 			$(".content .tab_content:first-child").show();
@@ -25,334 +25,7 @@
 			})
 		});
 	</script>
-    <style>
-        /* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap'); */
-        body {
-            background-color:#008080;
-        }
-        
-        #w3review {
-            white-space: nowrap;
-            display: flex;
-            overflow: hidden;
-
-        }
-*{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-
-.wrapper{
-
-  float:right;
-  width: 700px;
-  background: #fff;
-  margin: 120px auto;
-  border-radius: 3px;
-  height: 411px;
-  top:0px;
-  
-}
-
-.wrapper .tabs ul{
-  width: 100%;
-  height: 80px;
-  display: flex;
-}
-
-.wrapper .tabs ul li{
-  width: 25%;
-  height: 70px;
-  padding: 0 20px;
-  text-align: center;
-  background: #0c909f;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-}
-.wrapp li{
-  width: 25%;
-  height: 70px;
-  padding: 0 20px;
-  text-align: center;
-  background: #0c909f;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-}
-
-.wrapper .tabs ul li:first-child{
-  border-top-left-radius: 3px;
-}
-
-.wrapper .tabs ul li:last-child{
-  border-top-right-radius: 3px;
-}
-
-.wrapper .tabs ul li img{
-  width: 35px;
-  height: 35px;
-  display: block;
-  margin: 0 auto 3px;
-}
-
-.wrapper .content{
-  padding: 30px;
-  height: 260px;
-  border-bottom: 0px solid #87e2e2;
-  border-radius: 0px;
-}
-
-.wrapper .content .tab_content{
-  font-size: 14px;
-  line-height: 22px;
-}
-div.scrollmenu {
-            background-color: rgb(255, 255, 255);
-            overflow: auto;
-            white-space: nowrap;
-        }
-
-        div.scrollmenu a {
-            display: inline-block;
-            color: rgb(106, 24, 24);
-            text-align: center;
-            padding: 14px;
-            text-decoration: none;
-        }
-
-        div.scrollmenu a:hover {
-            background-color: rgb(255, 255, 255);
-        }
-
-.wrapper .tabs ul li.active{
-  border-top: 6px solid #798282;
-  margin-top: -15px;
-  background: #fff;
-  color: #44c8fe;
-  padding-top: 9px;
-}
-.btn-default {
-            background: rgb(31, 79, 82);
-            color: rgb(235, 235, 235);
-            border-radius: 8px;
-            width: 12%;
-            padding: 6px 6px;
-            font-size: 26px;
-            margin: 15px;
-        }
-
-        .container {
-            /* position: fixed; */
-            align-items: center;
-            left: 30%;
-            bottom: 100px;
-
-        }
-
-        .btn-default:hover {
-            background: rgb(143, 214, 231);
-            color: rgb(54, 163, 167);
-
-        }
-
-
-
-        
-.Output{
-  background-color: lightblue;
-  width: 1200px;
-  padding: 50px;
-  margin: 20px;
-  height:150px
-}
-highlight {
-  background-color: yellow;
-}
-    </style>
-</head>
-<body onload="init()">
-  
-	 <!-- memory layout -->
-<div class="wrapper">
-  <div class="tabs">
-    <ul>
-      <li class="active" data-list="tab_1">
-       
-        <p>
-          GPR
-
-        <!--A,B,C,D,E,F,G,H!-->
-
-        </p>
-      </li>
-
-
-      <li data-list="tab_2">
-       
-        RAM
-        
-    
-         <!--RAM table-->
-
-    
-         </li>
-
-      <li data-list="tab_3">
-        
-        FLAG
-        
-        <!-- Flags-->
-
-    
-        </li>
-
-      <li data-list="tab_4">
-       
-        EXTERNAL REG
-        
-        <!--External reg-->
-    
-        
-        </li>
-     
-    </ul>
-  </div>
-
-<div class="content">
-  <div class="tab_content tab_1">
-    <table cellpadding="10" cellspacing="56" border="20">
-        <thead>
-        <tr>
-            
-            <th>A</th>
-            <th>B</th>
-            <th>C</th>
-            <th>D</th>
-            <th>E</th>
-            <th>F</th>
-            <th>G</th>
-            <th>H</th>
-        </tr>
-        </thead>
-        <tbody>
-       
-          <tr>
-            <td id="row1"></td>
-            <td id="row2"></td>
-            <td id ="row3"></td>
-             <td id ="row4"></td>
-            <td id="row5"></td>
-            <td id="row6"></td>
-            <td id ="row7"></td>
-             <td id ="row8"></td>
-        </tr>
-        </tbody>
-    </table> 
-  </div>
-     
-  
-  <div class="tab_content tab_2">
-    <div class="scrollmenu">
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input id="search_id" type="text" placeholder="Search..." name="search">
-          <input  type="button" value="search" onclick=sear() >
-        </form>
-      </div>
-
-      <div id="ram_data" >
-
-
-      </div>
-      <!-- 
-        <table border="7">
-<thead>
-  <tr><td>1-10</td><td id="ro1"></td></tr>
-  <tr><td>11-20</td><td id="ro2"></td></tr>
-  <tr><td>11-20</td><td id="ro3"></td></tr>
-    </thead>
-</table>-->
-</div>
-  </div>
-
-
-
-
-
-  <div class="tab_content tab_3">
-    <table cellpadding="0" cellspacing="65" border="20">
-        <thead>
-        <tr>
-            
-            <th>Carry</th>
-            <th>Zero</th>
-            <th>Comparator</th>
-            <th>Error</th>
-            </tr>
-            </thead>
-            <tr>
-            <td id="r1"></td>
-            <td id="r2"></td>
-            <td id ="r3"></td>
-            <td id ="r4"></td>
-            </tr>
-            </table>
-</div>
-
-
-<div class="tab_content tab_4">
-  <table cellpadding="0" cellspacing="28" border="20">
-      <thead>
-      <tr>
-          <th > Pins  </th> 
-          <th>Pinsel 0</th>
-          <th>Pinsel 1</th>
-          <th>Timer val</th>
-          <th>Timer con</th> 
-           <th>THR</th>
-          <th>LSR</th></tr>
-
-          </tr>
-          </thead>
-          <tr>
-          <td id="c1"></td>
-          <td id="c2"></td>
-          <td id ="c3"></td>
-          <td id="c4"></td>
-          <td id="c5"></td>
-          <td id="c6"></td>
-              <td id="c7"></td>
-          </tr>
-          <tr>
-          
-            <th>RBR</th>
-            <th>LCR</th>
-            <th>Interrupt</th></tr>
-            <tr>
-              
-              <td id ="c8"></td>
-              <td id="c9"></td>
-              <td id="c10"></td>
-              </tr>
-          </table>
-</div>
-
-
-
- </div>
-</div>
-</div>
-<script>
+  <script>
     var gpr=[0,0,0,0,0,0,0,0],ram=[],count=-1,z=0,flg=0,flg_s=0,cmp_flag=0,label=[],cnt=0;//count=-1,z=0;
     var addr_gd,gd_st,errorflag=0,disp,savan=0;
     var labelcount=0;
@@ -364,21 +37,29 @@ highlight {
     function mafun(){
        
     var element = document.getElementById("tb1").value;
+
     var arr= element.split("\n");
     for(var y=0;y<arr.length;y++){
     arr[y]=arr[y].replace(/\s/g, '');
    
+
     }  
+
     var imm,val1,val2,op1,op2,cmp_flag,flag,error=0,numb;
+
     for(z=0;z<arr.length;z++){
+
     if(errorflag)
     break;
     else{
     imm=0;
+
     if((arr[z].substring(0,2)=='L:'))
+
     label[z]=arr[z].substring(2,);
   
       else
+
 
   {
 
@@ -386,32 +67,39 @@ highlight {
 //  continue;
 //  cnt=cnt+1;
 
+
 // data[count-cnt]=arr[count];
     
     if(arr[z].substring(5,6)=="#") //adda,#
+
     {
     imm=1;  
     var numtxt=(arr[z].substring(6,12)); 
     var in1=arr[z].substring(3,4);
     numb = parseInt(numtxt);
+
     }
     
     else {
               var in1=arr[z].substring(3,4);
          var in2=arr[z].substring(5,6);
+
     
    
               switch(in2) {
 	                  case 'A':op2=gpr[0];break;
+
                       case 'B':op2=gpr[1];break;
                       case 'C':op2=gpr[2];break;
                      case 'D':op2=gpr[3];break;
                      case 'E':op2=gpr[4];break;
                      case 'F':op2=gpr[5];break;
+
                       case 'G':op2=gpr[6];break;
                         case 'H':op2=gpr[7];break;
                default: {if ((arr[z].substring(0,3)=='LDE') || (arr[z].substring(0,3)=='STE')){
         var str1="0x"    ;  
+
         var str2=(arr[z].substring(10,));
        var numtxt= str1.concat(str2);
               var numb = parseInt(numtxt);
@@ -432,9 +120,11 @@ highlight {
    if((arr[z].substring(0,1)=='B') ) {
        errorflag=0;
 
+
    }else{
     switch(in1) {
           case 'A':op1=gpr[0];break;
+
         case 'B':op1=gpr[1];break;
         case 'C':op1=gpr[2];break;
         case 'D':op1=gpr[3];break;
@@ -442,8 +132,10 @@ highlight {
         case 'F':op1=gpr[5];break;
         case 'G':op1=gpr[6];break;
         case 'H':op1=gpr[7];break;
+
         default: errorflag=1;                      
         }
+
     }
        
     switch(arr[z].substring(0,3)){
@@ -458,15 +150,18 @@ highlight {
 
                      } 
                      if(op1>65535)
+
                      flg=1;
                      
                      document.getElementById("r1").innerHTML=flg;
                     }
                      break;
+
          case 'CMP':  case 'CMP': {
                       if(op1>op2){
                       cmp_flag="01";
                         flg=1;
+
                         flg_s=0;
                   }
                     else if(op1<op2){
@@ -478,6 +173,7 @@ highlight {
                     else {
                     cmp_flag="00";
 
+
                     flg=0;
                     flg_s=0;
                   } document.getElementById("r2").innerHTML=flg_s;
@@ -486,6 +182,7 @@ highlight {
                      }
                      break;
                      
+
          case 'CMZ':{
           if(op1>0){ cmp_flag="01";
                         flg=1;
@@ -495,15 +192,18 @@ highlight {
                     else if(op1<0){
                       cmp_flag="11";
                     flg=1;
+
                         flg_s=1;}
                     else{
                       cmp_flag="00";
 
                       flg=0;
+
                       flg_s=0;
                   } document.getElementById("r2").innerHTML=flg_s;
                   document.getElementById("r1").innerHTML=flg;
                     document.getElementById("r3").innerHTML=cmp_flag;
+
                     }
                     break;
                     
@@ -518,6 +218,7 @@ highlight {
               var numtxt= str1.concat(op);
            op1 = parseInt(numtxt);
                   }
+
                 break;
 	   case 'STE':extern[numb]=op1.toString(16);
                 break;
@@ -527,15 +228,18 @@ highlight {
                           if(flg==1)
                           z=label.indexOf(arr[z].substring(3,));
                           errorflag=0;
+
                          
                         }
                         break;
             case 'BZS':{
                           if(flg_S==0)
+
                           z=label.indexOf(arr[z].substring(3,));
                           errorflag=0;
                         }
                         break;
+
             case 'BNC':{
                           if(flg==0)
                           z=label.indexOf(arr[z].substring(3,));
@@ -546,6 +250,7 @@ highlight {
               case 'BNZ':{
                           if(flg_s==0)
                           z=label.indexOf(arr[z].substring(3,));
+
                          flg_s=0;
                          errorflag=0;
                         }
@@ -559,15 +264,18 @@ highlight {
                     op1 = numb;
                     }
                      else
+
                     {
                      op1=op2;
                     }
                      break;
                      
+
         case 'MUL': if(imm==1){
                      op1 = immmul(op1,numb);
                      }
                      else
+
                      {
                      op1 = normmul(op1,op2);
                      }
@@ -582,6 +290,7 @@ highlight {
                      op1 = norf(op1,op2);
                      }
                      break;
+
                             
           case 'NOT':{
                      op1 = notf(op1);
@@ -591,15 +300,18 @@ highlight {
           case 'SUB':if(imm==1){
                      op1 = immsub(op1,numb);
                      }
+
                      else
                      {
                      op1 = normsub(op1,op2);
                      }
                      if(op1<=0){flg_s=1
+
                      
                      }
                      document.getElementById("r2").innerHTML=flg_s;
                      break;
+
           default:  errorflag=1;
                    
                    }
@@ -610,6 +322,7 @@ highlight {
         case 'D':gpr[3]=op1;break;
         case 'E':gpr[4]=op1;break;
         case 'F':gpr[5]=op1;break;
+
         case 'G':gpr[6]=op1;break;
         case 'H':gpr[7]=op1;break;
         default: errorflag=1;                      
@@ -618,14 +331,20 @@ highlight {
         
   
     if(errorflag==0){ document.getElementById("tb3").value="EXECUTED SUCCESSFULLY";
+	machine();
+
+	document.getElementById("tb3").innerHTML=disp;
+
     //  if(savan==1){
        
       // savan++;}
+
       }
     // document.getElementById("tb3").value=dat;
     else {
     document.getElementById("tb3").value="ERROR!";
 }
+
 
     
     document.getElementById("r4").innerHTML=errorflag;
@@ -644,20 +363,24 @@ highlight {
    document.getElementById("c3").innerHTML=extern[13];
    document.getElementById("c4").innerHTML=extern[12];
    document.getElementById("c5").innerHTML=extern[11];
+
    document.getElementById("c6").innerHTML=extern[8];
    document.getElementById("c7").innerHTML=extern[7];
    document.getElementById("c8").innerHTML=extern[6];
    document.getElementById("c9").innerHTML=extern[5];
    document.getElementById("c10").innerHTML=extern[4];
+
     }
 
 } 
     }
     for(var x=0;x<arr.length;x++){
+
     if(arr[x].substring(0,1)=='B'){
     
     data[x]=arr[x].substring(0,3)+(label.indexOf(arr[x].substring(3,))-labelcount);
     labelcount++;
+
   }
   else
   data[x]=arr[x];
@@ -672,6 +395,7 @@ highlight {
     
     function normadd(op1,op2)
     {
+
     return op1+op2;
     }
     function immadd(op1,numb)
@@ -681,15 +405,18 @@ highlight {
     
     
     function normmul(op1,op2)
+
     {
     return op1*op2;
     }
     function immmul(op1,numb)
     {
+
     return op1*numb;
     }
     
     function normsub(op1,op2)
+
     {
     op1=op1-op2;
     return op1;
@@ -713,11 +440,13 @@ highlight {
     
     function norf(op1,op2)
     {
+
     op1=~(op1|op2);
     return op1;
     }
     
     function notf(op1)
+
     {
     return ~(op1);
     }
@@ -736,11 +465,13 @@ highlight {
        for(var y=0;y<arr.length;y++){
     arr[y]=arr[y].replace(/\s/g, '');
     if(arr[y].substring(0,1)=='B'){
+
     
     data[y]=arr[y].substring(0,3)+(label.indexOf(arr[y].substring(3,))-labelcount);
     labelcount++;
   }
   else
+
   data[y]=arr[y];
 }
    
@@ -749,8 +480,11 @@ highlight {
 
 
 
+
        arr[count]=arr[count].replace(/\s/g, '');
+
        var imm,val1,val2,op1,op2,cmp_flag,flag,error=0,labelerror=0,numb,cnt=0;
+
        imm=0;
        if(arr[count].substring(0,2)=='L:')
    {
@@ -764,6 +498,7 @@ highlight {
        // highlight('arr[count]');
        if(arr[count].substring(5,6)=="#") //adda,#
        {
+
        imm=1;  
        var numtxt=(arr[count].substring(6,12)); 
        var in1=arr[count].substring(3,4);
@@ -778,20 +513,23 @@ highlight {
        switch(in2) {
        case 'A':op2=gpr[0];break;
        case 'B':op2=gpr[1];break;
+
        case 'C':op2=gpr[2];break;
        case 'D':op2=gpr[3];break;
        case 'E':op2=gpr[4];break;
        case 'F':op2=gpr[5];break;
+
        case 'G':op2=gpr[6];break;
        case 'H':op2=gpr[7];break;
-       default: {if ((arr[z].substring(0,3)=='LDE') || (arr[z].substring(0,3)=='STE')){
+       default: {if ((arr[count].substring(0,3)=='LDE') || (arr[count].substring(0,3)=='STE')){
            var str1="0x"    ;  
-           var str2=(arr[z].substring(10,));
+           var str2=(arr[count].substring(10,));
+
           var numtxt= str1.concat(str2);
                  var numb = parseInt(numtxt);
                 }
-                 else if((arr[z].substring(0,3)=='LDR') || (arr[z].substring(0,3)=='STR')){
-                   var numtxt=(arr[z].substring(5,));
+                 else if((arr[count].substring(0,3)=='LDR') || (arr[count].substring(0,3)=='STR')){
+                   var numtxt=(arr[count].substring(5,));
                      var numb = parseInt(numtxt);
                     }
    
@@ -801,6 +539,7 @@ highlight {
                  
        }
        }
+
        }
        
       
@@ -810,15 +549,18 @@ highlight {
            case 'C':op1=gpr[2];break;
            case 'D':op1=gpr[3];break;
            case 'E':op1=gpr[4];break;
+
            case 'F':op1=gpr[5];break;
            case 'G':op1=gpr[6];break;
            case 'H':op1=gpr[7];break;
            default: errorflag=1;                      
+
            }
                
           
        switch(arr[count].substring(0,3)){
        
+
             case 'ADD':if(imm==1){
                         op1= immadd(op1,numb);
                         if(op1>65535)
@@ -833,20 +575,25 @@ highlight {
                         break;
                         case 'CMP': {
                          if(op1>op2){
+
                          cmp_flag="00";
                            flg=0;
                            flg_s=0;
                      }
+
                        else if(op1<op2){
                        cmp_flag="10";
                        flg=1;
                            flg_s=0;
                      }
+
                        
                        else {
                        cmp_flag="01";
    
+
                        flg=0;
+
                        flg_s=1;
                      } document.getElementById("r2").innerHTML=flg_s;
                      document.getElementById("r1").innerHTML=flg;
@@ -856,6 +603,7 @@ highlight {
                         
             case 'CMZ':{
                          if(op1>0){ 
+
                                cmp_flag="01";
                              flg=1;
                               flg_s=0;
@@ -869,15 +617,18 @@ highlight {
                          cmp_flag="00";
                           flg=0;
                          flg_s=0;
+
                      } 
                      document.getElementById("r2").innerHTML=flg_s;
                      document.getElementById("r1").innerHTML=flg;
                        document.getElementById("r3").innerHTML=cmp_flag;
                        }
+
                        break;
             case 'LDR': op1=ram[numb];
                        break;
               case 'STR':ram[numb]=op1;
+
                        break;
                        case 'LDE': {var op=extern[numb];
                      
@@ -892,6 +643,7 @@ highlight {
                            count=label.indexOf(arr[count].substring(3,));}
                case 'BCS':{errorflag=0;
                              if(flg==1){if(label.indexOf(arr[count].substring(3,))!=-1){
+
                              count=label.indexOf(arr[count].substring(3,));
                              flg=0;
                              }
@@ -901,16 +653,19 @@ highlight {
                            break;
                case 'BZS':{errorflag=0;
                              if(flg_S==1){if(label.indexOf(arr[count].substring(3,))!=-1){
+
                              count=label.indexOf(arr[count].substring(3,));
                              flg_s=0;}
                              else labelerror=1;
                             
                            }
+
                        }
                            break;
                case 'BNC':{errorflag=0;
                              if(flg==0){if(label.indexOf(arr[count].substring(3,))!=-1){
                              count=label.indexOf(arr[count].substring(3,));
+
                             flg=0;
                              }
                             else labelerror =1;
@@ -922,6 +677,7 @@ highlight {
                              count=label.indexOf(arr[count].substring(3,));
                             flg_s=0;
                              }
+
                              else labelerror=1;
                            }
                            }
@@ -929,15 +685,18 @@ highlight {
             case 'XOR':{
                        op1 = exorf(op1,op2);
                        }    
+
                        break;
             case 'MOV':if(imm==1){
                        op1 = numb;
                        }
+
                         else
                        {
                         op1=op2;
                        }
                         break;
+
                         
            case 'MUL': if(imm==1){
                         op1 = immmul(op1,numb);
@@ -947,6 +706,7 @@ highlight {
                         op1 = normmul(op1,op2);
                         }
                         break;
+
                 
            case 'NND':{
                       op1 = nandf(op1,op2);
@@ -961,20 +721,24 @@ highlight {
              case 'NOT':{
                         op1 = notf(op1);
                         }
+
                         break;
                                      
              case 'SUB':if(imm==1){
                         op1 = immsub(op1,numb);
                         }
+
                         else
                         {
                         op1 = normsub(op1,op2);
                         }
+
                         if(op1<=0){flg_s=1
                         
                         } 
                         document.getElementById("r2").innerHTML=flg_s;
                         break;
+
              default:  errorflag=1;
                       
                       }
@@ -993,6 +757,7 @@ highlight {
           
           if (labelerror==1) document.getElementById("tb3").value="label "+arr[count].substring(3,)+" not found!";
           else if (errorflag==1) document.getElementById("tb3").value="syntax error at line "+(count+1);
+
           else document.getElementById("tb3").value=arr[count];
 
 
@@ -1002,17 +767,20 @@ highlight {
       document.getElementById("row3").innerHTML=gpr[2]; 
       document.getElementById("row4").innerHTML=gpr[3]; 
       document.getElementById("row5").innerHTML=gpr[4];
+
       document.getElementById("row6").innerHTML=gpr[5]; 
       document.getElementById("row7").innerHTML=gpr[6]; 
       document.getElementById("row8").innerHTML=gpr[7];
    
       document.getElementById("r4").innerHTML=errorflag;
+
    //externnn
        document.getElementById("c1").innerHTML=extern[15];
       document.getElementById("c2").innerHTML=extern[14];
       document.getElementById("c3").innerHTML=extern[13];
       document.getElementById("c4").innerHTML=extern[12];
       document.getElementById("c5").innerHTML=extern[11];
+
       document.getElementById("c6").innerHTML=extern[8];
       document.getElementById("c7").innerHTML=extern[7];
       document.getElementById("c8").innerHTML=extern[6];
@@ -1023,12 +791,14 @@ highlight {
    
    
        }
-       if(errorflag==0){
-        savan++; 
-        if(savan==1){
+       //if(errorflag==0){
+        //savan++; 
+        //if(savan==1){
        machine();
-   document.getElementById("tb2").value=disp;}}
+   document.getElementById("tb2").value=disp;
+   //}}
  
+
        }
 
 
@@ -1038,11 +808,13 @@ var disp;
 
 function machine(){
   
+
   var ins=[],bit_3,bit_31,bit_num,mac_code,dec,hex;
   var i=0,j=0,x=0,a=[],value;
   // var element="MOVA,#10 ADDB,A CMPA,B CMZA LDRA,5555 LDEB,0XFFFF MULA,B";
   // var data=element.split(" ");     //split into individual instructions
   for(i=0;i<data.length;i++)       //loop for travelling through each -individual instructions 
+
       {
           ins=data[i];             // the variable 'ins' gets one instruction 
           switch (ins[0])          //to check the first character the instruction stored in variable 'ins'
@@ -1061,14 +833,17 @@ function machine(){
               break;
               case "N":
                   a[x]=nnd_nor_not(ins);   //go to nand/nor/not function if first character is N and return the resulting binary code to array a[x] 
+
                   x++;
               break;
               case "S":
                   a[x]=sub_str_ste(ins);   //go to sub/store/store(external) function if first character is S and return the resulting binary code to array a[x] 
+
                   x++;
               break;
               case "B":
                         a[x]=branch(ins.substring(0,3));
+
                         x++;
                         break;
               case "X":                          //EXOR operation if first character is X
@@ -1078,42 +853,51 @@ function machine(){
                   //00000000      //8 bit zeros
                   mac_code="000000000011110110"+bit_3+bit_31+"00000000";   //32 BIT MACHINE CODE
                   a[x]=mac_code;                                           //machine code is stored in the array a
+
                   x++;                                                    //increment array 
               break;
               case "L":                                                   //if first character is L then check third character
                   if(ins[2]=='R')                                         //if third character is R then load operation
                   {
+
                       //00000000001100                                      //14 bit ldr machine code
                       bit_3=register(ins[3]);                               //returns 3 bit boinary code of tghe character
                       if((ins[6]=='x')|(ins[6]=='X'))                       //check if the given data is hexadecimal or decimal by comparing the sisth character
                       {
+
                        bit_num=hex2binLS(ins.substring(5,));  //function to convert hexadecimal to binary
                       }
                       else
                       {
+
                        bit_num=dec2binLS(ins.substring(5,));  //function to convert decimal to binary
                       }
                       mac_code="00000000001100"+bit_3+bit_num;  //32 BIT MACHINE CODE
                       a[x]=mac_code;
                       x++;                                      //increment array
+
                   }
                   else if(ins[2]=='E')   //if third character is E then load(external) operation
                   {
                       //00000000011100    //14 bit ldr machine code
+
                       bit_3=register(ins[3]);             //3 bit binary code of the chareacter
                       if((ins[6]=='x')|(ins[6]=='X'))      //to check if the number is decimal or hexadecimal
                       {
                        bit_num=hex2binLS(ins.substring(5,));  //function to convert hexadecimal to binary
                       }
+
                       else
                       {
                        bit_num=dec2binLS(ins.substring(5,));   //function to convert decimal to binary
                       }
                       mac_code="00000000011100"+bit_3+bit_num;  //32 BIT MACHINE CODE
                       a[x]=mac_code;                            //store the machine code in the array
+
                       x++;                                      //increment array
                   }
               break;
+
               default:
                  errorflag=1;
                   break;
@@ -1128,19 +912,23 @@ function machine(){
       {
           var m_c=[[a[i].substring(0,16),a[i].substring(16,)]];
           disp += "ROM["+xxx+"]"+"="+"16'b"+m_c[0][0]+";"+"\n" + "ROM["+(xxx+1)+"]"+"="+"16'b"+m_c[0][1]+";"+"\n";
+
           xxx=xxx+2;
           if(xxx>=(a.length)*2)
           {
               break;
+
           }
       }
       disp += "";
-      document.getElementById("tb2").innerHTML= disp;
+     // document.getElementById("tb2").innerHTML= disp;
       document.getElementById("dwn-btn").addEventListener("click", function(){
+
 var text = document.getElementById("tb2").value;
 var filename = "Binarycode.txt";
 
 download(filename, text);}, false);
+
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////        
@@ -1160,6 +948,7 @@ document.body.appendChild(disp);
 
 disp.click();
 
+
 document.body.removeChild(disp);
 }
 
@@ -1170,10 +959,12 @@ document.body.removeChild(disp);
 function dec2binBRANCH(dec)
 {
 
+
   var aa= (dec >>> 0).toString(2);
   return pad(aa, 12);
   function pad(n, width) 
  {
+
   n = n + '';
   return n.length >= width ? n : 
   new Array(width - n.length + 1).join('0') + n;
@@ -1197,20 +988,24 @@ switch (val)          //to check the first character the instruction stored in v
                          mac_code="00000000001110001"+bit_num+"000";
                          return mac_code;
                         }
+
                     break;
                     case "BNZ":
                        {
                          bit_num=dec2binBRANCH(3,);
                          mac_code="00000000001110010"+bit_num+"000";
+
                          return mac_code;
                         }
                     break;
                     case "BRC":
+
                        {
                          bit_num=dec2binBRANCH(3,);
                          mac_code="00000000001110011"+bit_num+"000";
                          return mac_code;
                         }
+
                     break;
                     case "BNC":
                        {
@@ -1220,10 +1015,12 @@ switch (val)          //to check the first character the instruction stored in v
                         }
                     break;
                     case "BSP":
+
                        {
                          bit_num=dec2binBRANCH(3,);
                          mac_code="00000000001110101"+bit_num+"000";
                          return mac_code;
+
                         }
                     break;
                     default:
@@ -1234,10 +1031,12 @@ switch (val)          //to check the first character the instruction stored in v
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // function for add operation
 function add(ins)
+
 {
 
 if (ins[5]=='#')                                 // check whether its immidiate operation by checking the fifth charcter of the instruction stored in variable 'ins'
   {
+
       // 0000000000000                         // first 13 bits
       bit_3=register(ins[3]);                  // get 3 bit binary code the the character 
       if((ins[7]=='x')|(ins[7]=='X'))          //chech whethewr the numbwr is hexadecimal or decimal ,,if it is decimal then go to ELSE part of thre IF ELSE lopp
@@ -1246,6 +1045,7 @@ if (ins[5]=='#')                                 // check whether its immidiate 
       }
       else
       {
+
       bit_num=dec2bin(ins.substring(6,));       //function to conmvert decimal to binary
       } 
       mac_code="0000000000000"+bit_3+bit_num;   //32  BIT MACHINE CODE
@@ -1269,10 +1069,12 @@ else if((ins[5]=="A")|(ins[5]=="B")|(ins[5]=="C")|(ins[5]=="D")|(ins[5]=="E")|(i
 function register(value)
 {
 switch(value)
+
 {
   case 'A': return '000';	break;      
   case 'B': return '001';	break;
   case 'C': return '010';	break;
+
   case 'D': return '011';	break;
   case 'E': return '100';	break;
   case 'F': return '101';	break;
@@ -1292,6 +1094,7 @@ return pad(aa, 16);
 function pad(n, width) 
 {
 n = n + '';
+
 return n.length >= width ? n : 
 new Array(width - n.length + 1).join('0') + n;
 }
@@ -1302,10 +1105,12 @@ new Array(width - n.length + 1).join('0') + n;
 function dec2binLS(dec)
 {
 
+
 var aa= (dec >>> 0).toString(2);
 return pad(aa, 15);
 function pad(n, width) 
 {
+
 n = n + '';
 return n.length >= width ? n : 
 new Array(width - n.length + 1).join('0') + n;
@@ -1315,6 +1120,7 @@ new Array(width - n.length + 1).join('0') + n;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //function to convert hexadecimal to binary
 function hex2bin(hex)
+
 {
 return ("0000000000000000" + (parseInt(hex, 16)).toString(2)).substr(-16);
 }
@@ -1333,15 +1139,18 @@ function cmp_z(ins)
 if (ins[2]=='Z')                                   //compare with zero
   {
       // 000000000011111010                      // first 18 bits
+
       bit_3=register(ins[3]);                    //3bits 
       //00000000                                 //8 bits 
       mac_code="000000000011111010"+bit_3+"00000000000";
       return mac_code;
   }
+
 else if(ins[2]=="P")                                   //compare non zero 
   { 
       //000000000011111000                           // first 18 bits
       bit_3=register(ins[3]);                        //3 bits
+
       bit_31=register(ins[5]);                       //3 bits
       //00000000                                     // last 8 bits //it needs updating
       mac_code="000000000011111000"+bit_3+bit_31+"00000000";
@@ -1361,15 +1170,18 @@ if (ins[1]=='O')     //if first character is 'O' thrn move operation
               // 0000000000101                // first 13 bits
               bit_3=register(ins[3]);          //3bits 
               if((ins[7]=='x')|(ins[7]=='X'))
+
               {
               bit_num=hex2bin(ins.substring(6,));
               }
               else
+
               {
               bit_num=dec2bin(ins.substring(6,));
               }
               mac_code="0000000000101"+bit_3+bit_num;
               return mac_code;
+
       }
       else if((ins[5]=="A")|(ins[5]=="B")|(ins[5]=="C")|(ins[5]=="D")|(ins[5]=="E")|(ins[5]=="F")|(ins[5]=="G")|(ins[5]=="H"))
       {
@@ -1379,6 +1191,7 @@ if (ins[1]=='O')     //if first character is 'O' thrn move operation
               //0000000000000 // last 13 bits //it needs updating
               mac_code="0000000000100"+bit_3+bit_31+"0000000000000";
               return mac_code; 
+
       }
   }
 else if(ins[1]=='U') //if first operation is 'U' then multiplication operations
@@ -1393,15 +1206,18 @@ else if(ins[1]=='U') //if first operation is 'U' then multiplication operations
               }
               else
               {
+
               bit_num=dec2bin(ins.substring(6,));   //decimal to binary
               }
               mac_code="0000000000010"+bit_3+bit_num;
               return mac_code;
       }
+
       else if((ins[5]=="A")|(ins[5]=="B")|(ins[5]=="C")|(ins[5]=="D")|(ins[5]=="E")|(ins[5]=="F")|(ins[5]=="G")|(ins[5]=="H"))
       {
               //000000000011110010  // first 18 bits
               bit_3=register(ins[3]);        //3 bits
+
               bit_31=register(ins[5]);       //3 bits
               //00000000 // last 8 bits //it needs updating
               mac_code="000000000011110010"+bit_3+bit_31+"00000000";
@@ -1416,6 +1232,7 @@ else if(ins[1]=='U') //if first operation is 'U' then multiplication operations
 //function for nand nor and not operation
 function nnd_nor_not(ins)
 {
+
 if (ins[2]=='D')    // if thr second character is D then nand operation
 {
   //000000000011110100        //18 bit nand machine code
@@ -1429,16 +1246,20 @@ else if(ins[2]=='R')  //if character is R then nor operation
 {
   //000000000011110101        //18 bit nand machine code
   bit_3=register(ins[3]);     //3 bit 
+
   bit_31=register(ins[5]);    //3 bit
+
   //00000000      //8 bit last no.'s
   mac_code="000000000011110101"+bit_3+bit_31+"00000000";
   return mac_code; 
 }
+
 else if(ins[2]=='T')  //if character is T themn not opertaion
 {
   //000000000011110111        //18 bit nand machine code
   bit_3=register(ins[3]);     //3 bit 
   //00000000000      //11 bit last no.'s
+
   mac_code="000000000011110111"+bit_3+"00000000000";
   return mac_code; 
 }
@@ -1453,19 +1274,23 @@ function sub_str_ste(ins)
 if (ins[2]=='B')       //if second character is B then subtraction opereation
 {
   if (ins[5]=='#')    // if # then immediate operation
+
   {
       // 0000000000001  // first 13 bits
       bit_3=register(ins[3]);            //3bits 
       if((ins[7]=='x')|(ins[7]=='X'))    // check if number is hexadecimal or decimal
+
       {
        bit_num=hex2bin(ins.substring(6,));
       }
       else
       {
+
        bit_num=dec2bin(ins.substring(6,));
       }
       mac_code="0000000000001"+bit_3+bit_num;
       return mac_code; 
+
   }
   else if((ins[5]=="A")|(ins[5]=="B")|(ins[5]=="C")|(ins[5]=="D")|(ins[5]=="E")|(ins[5]=="F")|(ins[5]=="G")|(ins[5]=="H"))
   {
@@ -1480,15 +1305,18 @@ if (ins[2]=='B')       //if second character is B then subtraction opereation
 else if (ins[2]=='R')  //if character is R then store operation
 {
   //00000000001101    //14 bit machine code for str
+
   bit_3=register(ins[3]);            //3bits
       if((ins[6]=='x')|(ins[6]=='X'))
       {
        bit_num=hex2binLS(ins.substring(5,));
       }
+
       else
       {
        bit_num=dec2binLS(ins.substring(5,));
       }
+
   mac_code="00000000001101"+bit_3+bit_num;
   return mac_code;
 }
@@ -1499,6 +1327,7 @@ else if (ins[2]=='E') //if character is E then store(external) operation
   if((ins[6]=='x')|(ins[6]=='X'))
       {
        bit_num=hex2binLS(ins.substring(5,));
+
       }
       else
       {
@@ -1508,74 +1337,296 @@ else if (ins[2]=='E') //if character is E then store(external) operation
   return mac_code;
 }
 }
-    </script>
-     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--code-->
-<h2>CODE:</h2>
- 
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- 
- 
+function init(){
+   	 flg=0,flg_s=0,cmp_flag=0;
+  	 gpr=[0,0,0,0,0,0,0,0];
 
-<form action="/action_page.php">
-    <textarea id="tb1" name="tb1" rows="28" cols="120" style="background-color: rgb(100, 207, 213)" style="margin: 5px; width: 631px; height: 392px;">
-    </textarea>
-  </textarea>
-  <br><br>
-</form>
-<!--output-->
-<span>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-  <h2> OUTPUT:</h2>
- 
-<span >
+  		count=-1;
+ 		 z=0;
+		errorflag=0;
+
+  		for(let j=0;j<30;j++){
+
+  			extern[j]=0;}
+  /*for(i=0;i<cou;i++){
+  if (isNaN(ram[i])==false){
+  ram[i]=0;*/
+
+
+  			for(i=0;i<(2**14);i++){
+ 			 ram[i] = 0; }
+
+  			document.getElementById("tb3").value="";
+
+  			document.getElementById("tb2").value="";
+  			disp="";
   
-  <textarea id="tb3" name="tb3" style="background-color: rgb(100, 207, 213)"  style="color:red" rows="5px"  cols="235" readonly="readonly" style="margin: 50px; width: 10000px; height: 50px;">
-  </textarea>
-</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <h2>MACHINE CODE:</h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-  <span ></span>
-<textarea id="tb2" name="tb2" rows="10px"  style="background-color: rgb(85, 181, 196)" cols="235" readonly="readonly" style="margin: 5px; width:1515px; height: 100px;">
-</textarea>
-</span>
+  
+  
+  			document.getElementById("r1").innerHTML=flg;
+  			document.getElementById("r2").innerHTML=flg_s;
+  			document.getElementById("r3").innerHTML=cmp_flag;
+  			document.getElementById("r4").innerHTML=errorflag;
+  			document.getElementById("row1").innerHTML=gpr[0];
+ 			document.getElementById("row2").innerHTML=gpr[1]; 
+ 			document.getElementById("row3").innerHTML=gpr[2]; 
+ 			document.getElementById("row4").innerHTML=gpr[3]; 
+			document.getElementById("row5").innerHTML=gpr[4];
+ 			document.getElementById("row6").innerHTML=gpr[5]; 
+ 			document.getElementById("row7").innerHTML=gpr[6]; 
+ 			document.getElementById("row8").innerHTML=gpr[7];
 
 
-     
+//externnn
 
-<!--button-->
-<footer>
-  <div class="container">
-    <input class= "btn-default" type="button" value="RUN" onclick="mafun()" >
-    <input class="btn-default" type="button" value="RESET" onclick="init()" >
-    <input class= "btn-default"  type="button" value="DEBUG" onclick="debug()" >
-    <input class="btn-default"  type="button" id="dwn-btn" value="COMPILE" onclick=" download()" >
-     
-  </div>
-</footer>
+			document.getElementById("c1").innerHTML=extern[15];
+			document.getElementById("c2").innerHTML=extern[14];
+			document.getElementById("c3").innerHTML=extern[13];
+			document.getElementById("c4").innerHTML=extern[12];
+			document.getElementById("c5").innerHTML=extern[11];
+
+			document.getElementById("c6").innerHTML=extern[0];
+			document.getElementById("c7").innerHTML=extern[1];
+			document.getElementById("c8").innerHTML=extern[3];
+			document.getElementById("c9").innerHTML=extern[2];
+			document.getElementById("c10").innerHTML=extern[4];
 
 
 
+ 		}
+ 
+ 
+function sear()
+{ 
+   gd_st=document.getElementById("search_id").value
+
+   addr_gd=parseFloat(gd_st);
+//  for(let u=addr_gd;u<addr_gd+100;u++)
+/* document.getElementById("tb2").value=addr_gd;
+  document.getElementById("ro1").innerHTML=ram.slice(addr_gd,addr_gd+30);  
+  document.getElementById("ro2").innerHTML=ram.slice(addr_gd+31,addr_gd+61);  
+
+  document.getElementById("ro3").innerHTML=ram.slice(addr_gd+61,addr_gd+91);*/
+
+  displayRAMinfo(parseInt(gd_st));
+  
+
+}
+
+
+function displayRAMinfo(address)
+{
+
+
+    let k = ram.length;
+    console.log("The length of Ram is " + ram.length);
+
+
+
+   var disp = "";
+
+   disp += "<table class=\"table table-hover\">";
+   max_col = address+60;
+   for(i=address;i<max_col;i=i+15)
+   {
+   disp += "<tr>";
+   disp += "<th> "+i + "</th>" ;
+   for(k=0;k<=14;k++)
+
+   disp += "<td>" + ram[i+k] + "</td>";
+   }
+   disp += "</table>";
+   document.getElementById("ram1").innerHTML = disp;
+
+}
+
+
+    </script>	
+	
+	
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body onload="init()">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ 		 <a class="navbar-brand" href="#">Prathama</a>
+ 		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    			<span class="navbar-toggler-icon"></span>
+ 		 </button>
+  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    			<ul class="navbar-nav">
+      				<li class="nav-item">
+        				<a class="nav-link" href="index.html">Home</a>
+      				</li>
+      				<li class="nav-item">
+       			 	<a class="nav-link" href="aboutus.html">About Us</a>
+      				</li>
+     				 <li class="nav-item">
+       				 <a class="nav-link" href="contactus.html">Contact Us</a>
+      				</li>    
+    			</ul>
+ 		 </div>  
+	</nav>
+
+	<div class="container" style="margin-top:10px">
+  		<div class="row">
+    			<div class="col-sm-4">
+     				<div class="form-group">
+  					<label for="comment">Code:</label>
+  					<textarea class="form-control" rows="8" id="tb1"></textarea>
+				</div> 
+ 			</div>
+    
+	
+	 		<div class="col-sm-8">
+      				<ul class="nav nav-tabs nav-pills nav-fill">
+  					<li class="nav-item">
+    						<a class="nav-link active" data-toggle="tab" href="#gpr">GPR</a>
+  					</li>
+ 					 <li class="nav-item">
+  						  <a class="nav-link" data-toggle="tab" href="#ram">RAM</a>
+  					</li>
+  					<li class="nav-item">
+   						 <a class="nav-link" data-toggle="tab" href="#peripheral">PERIPHERAL</a>
+  					</li>
+  					<li class="nav-item">
+  						  <a class="nav-link" data-toggle="tab" href="#flag">FLAG</a>
+ 					 </li>
+				</ul>
+				<div class="tab-content">
+   					 <div id="gpr" class="container tab-pane active"><br>
+	
+						<table class="table table-hover table-bordered">
+       					 <thead>
+       						 <tr>
+           							 <th>A</th>
+           							 <th>B</th>
+           							 <th>C</th>
+          							 <th>D</th>
+           							 <th>E</th>
+            							 <th>F</th>
+         							 <th>G</th>
+            							 <th>H</th>
+        						</tr>
+       					 </thead>
+							<tr>
+            							<td id="row1"> </td>
+           							<td id="row2"> </td>
+            							<td id ="row3"> </td>
+             							<td id ="row4"> </td>
+            							<td id="row5"> </td>
+           							<td id="row6"> </td>
+            							<td id ="row7"> </td>
+             							<td id ="row8"> </td>
+        						</tr>
+						</table>
+       				</div>
+    					<div id="ram" class="container tab-pane fade"><br>
+       					<form class="form-inline" action="#">
+    							<input class="form-control mr-sm-2" type="text" placeholder="Search" id="search_id">
+    							<button class="btn btn-success" type="submit" onclick=sear()>Search</button>
+	 					 </form>
+	 					 <div id="ram1">
+	  					 </div>
+	  				</div>
+    					<div id="peripheral" class="container tab-pane fade"><br>
+     						 <table class="table table-hover table-bordered">
+      							<thead>
+						      		<tr>
+								  <th > Pins  </th> 
+								  <th>Pinsel 0</th>
+								  <th>Pinsel 1</th>
+								  <th>Timer val</th>
+								  <th>Timer con</th> 
+								   <th>THR</th>
+								  <th>LSR</th></tr>
+
+								  </tr>
+							  </thead>
+							  	<tr>
+								  <td id="c1"></td>
+								  <td id="c2"></td>
+								  <td id ="c3"></td>
+								  <td id="c4"></td>
+								  <td id="c5"></td>
+								  <td id="c6"></td>
+							      	  <td id="c7"></td>
+								  </tr>
+							  	  <tr>
+							  
+								    <th>RBR</th>
+								    <th>LCR</th>
+								    <th>Interrupt</th>
+								  </tr>
+							         <tr>
+							      
+								      <td id ="c8"></td>
+								      <td id="c9"></td>
+								      <td id="c10"></td>
+							         </tr>
+							  </table>
+    					</div>
+					<div id="flag" class="container tab-pane fade"><br>
+      							<table class="table table-hover table-bordered">
+							     <thead>
+								<tr>
+								    <th>Carry</th>
+								    <th>Zero</th>
+								    <th>Comparator</th>
+								    <th>Error</th>
+								 </tr>
+							      </thead>
+								  <tr>
+								    <td id="r1"></td>
+								    <td id="r2"></td>
+								    <td id ="r3"></td>
+								    <td id ="r4"></td>
+								  </tr>
+							</table>
+   					 </div>
+  				</div>
+
+      
+   			 </div>
+  		</div>
+	</div>
+
+ 
+  
+ 
+  
+	<div class="container" style="margin-top:10px">
+ 
+   		 <div class="form-group" >
+  			<label for="comment">Console:</label>
+  			<textarea class="form-control" rows="3" id="tb3" readonly></textarea>
+      		</div> 
+
+  	</div>
+  	<div class="container" style="margin-bottom:10px">
+ 
+    		<div class="form-group">
+  			<label for="tb2">Machine Code:</label>
+  			<textarea class="form-control" rows="3" id="tb2" readonly></textarea>
+     		 </div> 
+	</div>
+	<div class="container" >
+  
+  		<nav class="navbar navbar-expand-sm bg-dark navbar-dark  justify-content-center fixed-bottom">
+  
+  			<button type="button" class="btn-info mr-2" onclick="mafun()" >Run</button>
+  			<button type="button" class="btn-info mr-2" onclick="debug()">Debug</button>
+  			<button type="button" class="btn-danger mr-2" onclick="init()" >Reset</button>
+  			<button type="button" class="btn-info mr-2" id="dwn-btn" onclick=" download()">Compile</button>
+  		</nav>
+	</div>
+<div class="container" style="margin-bottom:70px">
+</div>
 
 </body>
 </html>
