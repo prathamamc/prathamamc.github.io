@@ -8,7 +8,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+   <style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  /*background-image: url("https://www.petitionglobal.com/resources/assets/images/petitions/1589822572proff%20pic.jpg");*/
+
+  /* Full height */
+  height: 100%; 
+background-color:teal;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-tabs{color:white;}
+.container{color:white;}
+.table{color:white;}
+.nav-item .nav-link {color:white !important;}
+ </style>
   <script>
 		$(document).ready(function(){
 			$(".content .tab_content").hide();
@@ -1452,7 +1474,7 @@ function displayRAMinfo(address)
   }
   </style>
 </head>
-<body onload="init()">
+<body onload="init()" class="bg">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
  		 <a class="navbar-brand" href="#">Prathama</a>
  		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -1473,7 +1495,7 @@ function displayRAMinfo(address)
  		 </div>  
 	</nav>
 
-	<div class="container-fluid" style="margin-top:10px">
+	<div class="container" style="margin-top:10px">
   		<div class="row">
     			<div class="col-sm-4">
      				<div class="form-group">
@@ -1600,7 +1622,7 @@ function displayRAMinfo(address)
   
  
   
-	<div class="container-fluid" style="margin-top:10px">
+	<div class="container" style="margin-top:10px">
  
    		 <div class="form-group" >
   			<label for="comment">Console:</label>
@@ -1608,7 +1630,7 @@ function displayRAMinfo(address)
       		</div> 
 
   	</div>
-  	<div class="container-fluid" style="margin-bottom:10px">
+  	<div class="container" style="margin-bottom:10px">
  
     		<div class="form-group">
   			<label for="tb2">Machine Code:</label>
@@ -1619,10 +1641,10 @@ function displayRAMinfo(address)
   
   		<nav class="navbar navbar-expand-sm bg-dark navbar-dark  justify-content-center fixed-bottom">
   
-  			<button type="button" class="btn-info mr-2" onclick="mafun()" >Run</button>
-  			<button type="button" class="btn-info mr-2" onclick="debug()">Debug</button>
-  			<button type="button" class="btn-danger mr-2" onclick="init()" >Reset</button>
-  			<button type="button" class="btn-info mr-2" id="dwn-btn" onclick=" download()">Compile</button>
+  			<button class="btn-info mr-2" onclick="mafun()" >Run</button>
+  			<button class="btn-info mr-2" onclick="debug()">Debug</button>
+  			<button class="btn-danger mr-2" onclick="init()" >Reset</button>
+  			<button class="btn-info mr-2" id="dwn-btn" onclick=" download()">Compile</button>
   		</nav>
 	</div>
 <div class="container-fluid" style="margin-bottom:70px">
