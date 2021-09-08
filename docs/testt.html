@@ -4,7 +4,7 @@
   <title>Prathama</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -39,9 +39,10 @@ background-color:teal;
   <script>
     var gpr=[0,0,0,0,0,0,0,0],ram=[],count=-1,z=0,flg=0,flg_s=0,cmp_flag=0,label=[],cnt=0;//count=-1,z=0;
     var addr_gd,gd_st,errorflag=0,disp,savan=0;
+    //label[0]=0;
     var labelcount=0;
     var extern=[];
-    
+    var ins=[];
     var data=[];
     
     //main nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
@@ -58,7 +59,8 @@ background-color:teal;
         var imm,val1,val2,op1,op2,cmp_flag,flag,error=0,numb,op,in1,b_count=0;
 
         for(z=0;z<arr.length;z++)
-        {
+        { 
+          label[z]="";
           if(errorflag)
             break;
           else
@@ -68,13 +70,13 @@ background-color:teal;
             {
 
               label[z]=arr[z].substring(2,);
+
               //break;
             }
   
             else
             {
-
-              //  label[z]=arr[z].substring(2,);
+                
               //  continue;
               //  cnt=cnt+1;
 
@@ -342,17 +344,27 @@ background-color:teal;
            
             b_count++;}
           
-          console.log(b_count)
+          //console.log(b_count)
         } 
         // 
         if(errorflag==0)
         {   
-            data=arr;
-            machine();
-            document.getElementById("tb2").value=disp;
+          for(var x=0;x<arr.length;x++)
+          {
+            if(arr[x].substring(0,1)=='B')
+            {
+              data[x]=arr[x].substring(0,3)+(2*label.indexOf(arr[x].substring(3,))-(labelcount-1));
+              labelcount=labelcount+1;
+
+            }
+            else
+            data[x]=arr[x];
+          }
+            //console.log(label)
+           // machine();
+            //document.getElementById("tb2").value=disp;
             document.getElementById("tb3").value+="EXECUTED SUCCESSFULLY";
         
-  
          //  if(savan==1){
          // savan++;}
         }
@@ -383,6 +395,243 @@ background-color:teal;
        document.getElementById("c10").innerHTML=extern[4];
 
     }
+
+
+function generate()
+    {
+       
+        var lcnt=0;
+        var element = document.getElementById("tb1").value;
+        var arr= element.split("\n");
+        for(var y=0;y<arr.length;y++)
+        {
+          arr[y]=arr[y].replace(/\s/g, '');
+        }  
+
+        var imm,val1,val2,op1,op2,cmp_flag,flag,error=0,numb,op,in1,b_count=0;
+
+        for(z=0;z<arr.length;z++)
+        { 
+          label[z]="";
+          if(errorflag)
+            break;
+          else
+          {
+            imm=0;
+            if((arr[z].substring(0,2)=='L:'))
+            {
+
+              label[lcnt]=arr[z].substring(2,);
+              console.log(label);
+              //console.log(lcnt)
+              //break;
+            }
+  
+            else
+            {    
+                //label[cnt]=""; 
+                
+                //if(label[lcnt].length==0)
+                  lcnt++;
+                
+              //  continue;
+              //  cnt=cnt+1;
+
+
+              // data[count-cnt]=arr[count];
+    
+              if(arr[z].substring(5,6)=="#") //adda,#
+              {
+                
+                in1=arr[z].substring(3,4);
+                op=arr[z].substring(0,3);
+              }
+              else if(arr[z].substring(0,1)=='B')
+              {
+                op=arr[z].substring(0,3);
+              }
+    
+              else 
+              {
+                in1=arr[z].substring(3,4);
+                var in2=arr[z].substring(5,6);
+                op=arr[z].substring(0,3);
+                switch(in2) 
+                {
+                  case 'A':errorflag=0; break;
+                  case 'B':errorflag=0; break;
+                  case 'C':errorflag=0; break;
+                  case 'D':errorflag=0; break;
+                  case 'E':errorflag=0; break;
+                  case 'F':errorflag=0; break;
+                  case 'G':errorflag=0; break;
+                  case 'H':errorflag=0; break;
+                  default:{
+                            if ((arr[z].substring(0,3)=='LDE') || (arr[z].substring(0,3)=='STE'))
+                            {
+                              errorflag=0;
+                            }
+                            else if((arr[z].substring(0,3)=='LDR') || (arr[z].substring(0,3)=='STR'))
+                            {
+                              errorflag=0;
+                            }
+                            else
+                              errorflag==1;
+              
+                          }
+                }
+              }
+            
+              switch(in1) 
+              {
+                case 'A':errorflag=0; break;
+                case 'B':errorflag=0; break;
+                case 'C':errorflag=0; break;
+                case 'D':errorflag=0; break;
+                case 'E':errorflag=0; break;
+                case 'F':errorflag=0; break;
+                case 'G':errorflag=0; break;
+                case 'H':errorflag=0; break;
+                default: ;{
+                            if(arr[z].substring(0,1)=='B')
+                              errorflag=0;   
+                            else 
+                              errorflag=1;
+                          }                 
+              }
+
+            
+              switch(op)
+              {
+                case 'ADD':{
+                              errorflag=0;
+                            }
+                            break;
+                case 'CMP':{
+                            errorflag=0;
+                         }
+                         break;
+                case 'CMZ':{
+                              errorflag=0;
+
+                            }
+                            break;
+                        
+                        break;
+                case 'LDR': errorflag=0;
+                            break;
+                case 'STR': errorflag=0;
+                            break;
+                case 'LDE':{
+                            errorflag=0
+                            }
+
+                    break;
+                case 'STE': errorflag=0;;
+                            break;
+                case 'BRN': {
+                              errorflag=0;;
+                            }
+                            break;
+                case 'BCS':{
+                              errorflag=0;
+                            }
+                            break;
+                case 'BZS':{
+                              errorflag=0;
+                            }
+                            break;
+                case 'BNC':{
+                              errorflag=0;
+                            }
+                            break;
+                case 'BNZ':{
+                            errorflag=0;
+                            }
+                            break;                                              
+                case 'XOR':{
+                          errorflag=0;
+                        }    
+                        break;
+                case 'MOV':{
+                              errorflag=0;
+                            }
+                            break;
+                case 'MUL':{ 
+                              errorflag=0;
+                            }
+                            break;   
+                case 'NND':{
+                              errorflag=0;
+                            }
+                            break;                     
+                case 'NOR':{
+                              errorflag=0;
+                            }
+                            break;
+                case 'NOT':{
+                            errorflag=0;
+                            }
+                                                              
+                case 'SUB':{
+                            errorflag=0;
+                           }
+                            break;
+                default:  errorflag=1;        
+              }
+              switch(in1) 
+              {
+                case 'A':errorflag=0; break;
+                case 'B':errorflag=0; break;
+                case 'C':errorflag=0; break;
+                case 'D':errorflag=0; break;
+                case 'E':errorflag=0; break;
+                case 'F':errorflag=0; break;
+                case 'G':errorflag=0; break;
+                case 'H':errorflag=0; break;d 
+                default: errorflag=1;                      
+              }
+            }
+          } 
+          
+          
+          console.log(lcnt)
+        } 
+        // 
+        if(errorflag==0)
+        {   
+          for(var x=0;x<arr.length;x++)
+          {
+            if(arr[x].substring(0,1)=='B')
+            {
+              data[x]=arr[x].substring(0,3)+2*label.indexOf(arr[x].substring(3,));
+              //labelcount=labelcount+1;
+
+            }
+            else
+            data[x]=arr[x];
+          }
+            console.log(label);
+            console.log(data);
+            machine();
+            document.getElementById("tb2").value=disp;
+            document.getElementById("tb3").value+="COMPILED SUCCESSFULLY";
+        
+         //  if(savan==1){
+         // savan++;}
+        }
+        else 
+        {
+          document.getElementById("tb3").value="ERROR!";
+        }    
+      
+
+    }
+
+
+
+
+
 
 // } 
 //     }
@@ -506,6 +755,7 @@ background-color:teal;
    }
    else {
    // data[count-cnt]=arr[count];
+
    
        // highlight('arr[count]');
        if(arr[count].substring(5,6)=="#") //adda,#
@@ -822,7 +1072,7 @@ function machine()
 {
   
 //alert("hi");
-  var ins=[],bit_3,bit_31,bit_num,mac_code,dec,hex;
+  var bit_3,bit_31,bit_num,mac_code,dec,hex;
   var i=0,j=0,x=0,a=[],value;
   // var element="MOVA,#10 ADDB,A CMPA,B CMZA LDRA,5555 LDEB,0XFFFF MULA,B";
   // var data=element.split(" ");     //split into individual instructions
@@ -993,14 +1243,14 @@ switch (val)          //to check the first character the instruction stored in v
                 {
                     case "BRN":
                         {
-                         bit_num=dec2binBRANCH(3,);
+                         bit_num=dec2binBRANCH(ins.substring(3,));
                          mac_code="00000000001110000"+bit_num+"000";
                          return mac_code;
                         }
                     break;
                     case "BZS":
                         {
-                         bit_num=dec2binBRANCH(3,);
+                         bit_num=dec2binBRANCH(ins.substring(3,));
                          mac_code="00000000001110001"+bit_num+"000";
                          return mac_code;
                         }
@@ -1008,7 +1258,7 @@ switch (val)          //to check the first character the instruction stored in v
                     break;
                     case "BNZ":
                        {
-                         bit_num=dec2binBRANCH(3,);
+                         bit_num=dec2binBRANCH(ins.substring(3,));
                          mac_code="00000000001110010"+bit_num+"000";
 
                          return mac_code;
@@ -1017,7 +1267,7 @@ switch (val)          //to check the first character the instruction stored in v
                     case "BRC":
 
                        {
-                         bit_num=dec2binBRANCH(3,);
+                         bit_num=dec2binBRANCH(ins.substring(3,));
                          mac_code="00000000001110011"+bit_num+"000";
                          return mac_code;
                         }
@@ -1025,7 +1275,7 @@ switch (val)          //to check the first character the instruction stored in v
                     break;
                     case "BNC":
                        {
-                         bit_num=dec2binBRANCH(3,);
+                         bit_num=dec2binBRANCH(ins.substring(3,));
                          mac_code="00000000001110100"+bit_num+"000";
                          return mac_code;
                         }
@@ -1033,7 +1283,7 @@ switch (val)          //to check the first character the instruction stored in v
                     case "BSP":
 
                        {
-                         bit_num=dec2binBRANCH(3,);
+                         bit_num=dec2binBRANCH(ins.substring(3,));
                          mac_code="00000000001110101"+bit_num+"000";
                          return mac_code;
 
@@ -1361,6 +1611,7 @@ function init(){
       count=-1;
      z=0;
     errorflag=0;
+    labelcount=0;
 
       for(let j=0;j<30;j++){
 
@@ -1632,8 +1883,6 @@ function displayRAMinfo(address)
         <textarea class="form-control" rows="3" id="tb2" readonly></textarea>
          </div> 
   </div>
-  <div class="container-fluid" style="margin-bottom:70px">
-</div>
   <div class="container-fluid" >
   
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark  justify-content-center fixed-bottom">
@@ -1641,10 +1890,12 @@ function displayRAMinfo(address)
         <button type="button" class="btn-info mr-2" onclick="mafun()" >Run</button>
         <button type="button" class="btn-info mr-2" onclick="debug()">Debug</button>
         <button type="button" class="btn-danger mr-2" onclick="init()" >Reset</button>
-        <button type="button" class="btn-info mr-2" id="dwn-btn" onclick=" download()">Compile</button>
+        <button type="button" class="btn-info mr-2" id="dwn-btn" onclick=" generate()">Compile</button>
+        <button type="button" class="btn-info mr-2" id="dwn-btn" onclick=" download()">Download</button>
       </nav>
   </div>
-
+<div class="container-fluid" style="margin-bottom:70px">
+</div>
 
 </body>
 </html>
